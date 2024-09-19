@@ -3,11 +3,242 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+  <link href="./output.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+
+  <div id="root">
+    <div class="content-wrapper">
+
+      <main>
+        <div class="bg-gray-50 min-h-screen flex flex-col items-center justify-center px-16">
+          
+          <!-- Head Section with name on the left and CV link on the right -->
+          <div class="w-full flex justify-between items-center mb-8">
+            <div class="name">
+              <h2 class="text-gray-400 font-bold">Nguyen Hai Dang</h2>
+              <h2 class="text-gray-400">Developer</h2>
+            </div>
+            <div class="cv text-gray-400 underline">
+              <a href="#">Download my CV</a>
+            </div>
+          </div>
+
+          <div class="page mb-8">
+            <ul class="flex space-x-10">
+              <li>
+                <a id="link-intro" class="text-gray-400 cursor-pointer" onclick="showSection('introduction', 'link-intro')">Introduction</a>
+              </li>
+              <li>
+                <a id="link-about" class="text-gray-400 cursor-pointer" onclick="showSection('about', 'link-about')">About me</a>
+              </li>
+              <li>
+                <a id="link-experience" class="text-gray-400 cursor-pointer" onclick="showSection('experience', 'link-experience')">Experience</a>
+              </li>
+              <li>
+                <a id="link-skills" class="text-gray-400 cursor-pointer" onclick="showSection('skills', 'link-skills')">Skills</a>
+              </li>
+              <li>
+                <a id="link-contact" class="text-gray-400 cursor-pointer" onclick="showSection('contact', 'link-contact')">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="relative w-full max-w-lg">
+            <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+            <div class="absolute top-0 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+            <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+
+            <div class="m-8 relative space-y-4">
+              <div class="p-5 bg-white rounded-lg flex items-center justify-between space-x-8">
+                <div class="flex-1">
+                  <img src="./image/anh.jpg" alt="Image">
+                </div>
+              </div>
+            </div>
+
+          <div class="w-full max-w-lg space-y-8">
+            <!-- Introduction Section -->
+            <div id="introduction" class="introduction ">
+              <div class="text-gray-400 m-2">
+                <h1 class="font-bold m-2">Hello! I'm Nguyen Hai Dang</h1>
+                <p class="m-2">This is the Introduction section.</p>
+              </div>
+            </div>
+
+            <!-- About me Section -->
+            <div id="about" class="hidden">
+              <div class="text-gray-400 m-2">
+                <h1 class="font-bold m-2">About Me</h1>
+                <p class="m-2">This is the About Me section.</p>
+                <p class="m-2">Email : haidang29072000@gmail.com</p>
+                <div class="m-2">Phone : 0794466160</div>
+              </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div id="experience" class="hidden">
+              <div class="text-gray-400 m-4">
+                <h1 class="font-bold m-2">Experience</h1>
+                <p class="m-2">This is the Experience section.</p>
+              </div>
+              <div class="space-y-4">
+                <div class="m-2 p-4 border-2 border-gray-400 rounded-full">
+                  <p class="text-gray-400">Experience</p>
+                </div>
+            
+                <div class="m-2 p-4 border-2 border-gray-400 rounded-full">
+                  <p class="text-gray-400">Experience</p>
+                </div>
+            
+                <div class="m-2 p-4 border-2 border-gray-400 rounded-full">
+                  <p class="text-gray-400">Experience</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div id="skills" class="hidden">
+              <div class="text-gray-400 m-2">
+                <h1 class="font-bold m-2">Skills</h1>
+                <p class="m-2">This is the Skills section.</p>
+              </div>
+  
+              <h1 class="text-gray-400 font-bold m-2">My Skillset</h1>
+              <div class="grid grid-cols-2 gap-4">
+            
+                
+                <div class="p-4 border-2 border-gray-400 rounded-full bg-white">
+                  <p class="text-gray-700">Skill</p>
+                </div>
+            
+                <div class="p-4 border-2 border-gray-400 rounded-full bg-white">
+                  <p class="text-gray-700">Skill</p>
+                </div>
+            
+        
+                <div class="p-4 border-2 border-gray-400 rounded-full bg-white">
+                  <p class="text-gray-700">Skill</p>
+                </div>
+            
+            
+                <div class="p-4 border-2 border-gray-400 rounded-full bg-white">
+                  <p class="text-gray-700">Skill</p>
+                </div>
+              </div>
+
+              <h1 class="text-gray-400 font-bold m-2">Toolset</h1>
+              <div class="w-full max-w-4xl p-4">
+                <!-- Hàng với hai div -->
+                <div class="grid grid-cols-2 gap-4">
+                  <!-- Div 1 -->
+                  <div class="p-4 border-2 border-gray-400 rounded-full bg-white">
+                    <p class="text-gray-700">Div 1 content</p>
+                  </div>
+            
+                  <!-- Div 2 -->
+                  <div class="p-4 border-2 border-gray-400 rounded-full bg-white">
+                    <p class="text-gray-700">Div 2 content</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div id="contact" class="hidden">
+              <div class="text-gray-400 m-2">
+                <h1 class="font-bold m-2">Contact</h1>
+                <p class="m-2">This is the Contact section.</p>
+              </div>
+
+              <div class="w-full max-w-lg p-6 bg-white border-2 border-gray-400 rounded-lg shadow-lg">
+                
+            
+                <form class="space-y-4">
+                  <!-- Name Field -->
+                  <div>
+                    <label for="name" class="block text-gray-600 font-semibold mb-2">Name</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Your Name">
+                  </div>
+            
+                  <!-- Email Field -->
+                  <div>
+                    <label for="email" class="block text-gray-600 font-semibold mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Your Email">
+                  </div>
+            
+                  <!-- Message Field -->
+                  <div>
+                    <label for="message" class="block text-gray-600 font-semibold mb-2">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Your Message"></textarea>
+                  </div>
+            
+                  <!-- Submit Button -->
+                  <div>
+                    <button type="submit" class="w-full py-2 bg-gray-700 text-white rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
+                      Send
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </main>
+
+      <footer>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function showSection(sectionId, linkId) {
+      // Ẩn tất cả các phần
+      const sections = document.querySelectorAll('.introduction, #about, #experience, #skills, #contact');
+      sections.forEach(section => section.classList.add('hidden'));
+
+      // Hiện phần được nhấn vào
+      const sectionToShow = document.getElementById(sectionId);
+      sectionToShow.classList.remove('hidden');
+
+      // Xóa lớp active-link từ tất cả các liên kết
+      const links = document.querySelectorAll('.page ul li a');
+      links.forEach(link => link.classList.remove('active-link'));
+
+      // Thêm lớp active-link vào liên kết hiện tại
+      const linkToActivate = document.getElementById(linkId);
+      linkToActivate.classList.add('active-link');
+    }
+
+    // Hiển thị phần Introduction khi trang được tải
+    document.addEventListener('DOMContentLoaded', () => {
+      showSection('introduction', 'link-intro');
+    });
+  </script>
+  <style>
+   
+    .active-link {
+      border-bottom: 2px solid #7f8693;
+      font-weight: bold; 
+    }
+
+    .content {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      transform: translateY(20px);
+    }
+
+    .content.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .content.hide {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  </style>
+
 </body>
 </html>
